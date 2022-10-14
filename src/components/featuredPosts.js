@@ -1,9 +1,8 @@
 import Article from "./articles";
 
 function FeaturedPosts({ featuredPosts }) {
-  console.log(featuredPosts);
   return (
-    <section>
+    <section id="featured">
       <h2>Featured posts</h2>
       <div class="articles">
         {featuredPosts.map((post, index) => (

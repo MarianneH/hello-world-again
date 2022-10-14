@@ -1,6 +1,6 @@
 function ContentComponent({ headline, text }) {
   return (
-    <section>
+    <section id="aboutus">
       <h2>{headline}</h2>
       <p class="text-content">{text}</p>
     </section>

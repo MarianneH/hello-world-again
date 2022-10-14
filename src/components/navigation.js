@@ -1,11 +1,17 @@
 function Navigation() {
   return (
-    <nav>
+    <nav id="navigation">
       <div class="logo">Workshop</div>
       <ul>
-        <li>Home</li>
-        <li>About us</li>
-        <li>Featured posts</li>
+        <li>
+          <a href="#navigation">Home</a>
+        </li>
+        <li>
+          <a href="#aboutus">About us</a>
+        </li>
+        <li>
+          <a href="#featured">Featured Posts</a>
+        </li>
       </ul>
     </nav>
   );

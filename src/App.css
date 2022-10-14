@@ -3,6 +3,7 @@
 }
 :root {
   --highlighting-color: #1e7a40;
+  --secondary-hl-color: #367b11;
   --hl-font-color: #ffffff;
   --card-color: #ffffff;
   --bg-color: rgb(238, 238, 238);
@@ -12,6 +13,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -19,11 +21,16 @@ body {
   background-color: var(--bg-color);
 }
 nav {
-  background-color: var(--highlighting-color);
+  background: linear-gradient(
+    to left,
+    var(--highlighting-color),
+    var(--secondary-hl-color)
+  );
   color: var(--hl-font-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 8px;
 }
 .logo {
   font-size: 1.5em;
@@ -33,13 +40,16 @@ nav {
 ul {
   list-style: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   margin: 1em;
 }
 li {
-  margin-right: 1em;
-  margin-bottom: 10px;
+  margin-left: 32px;
+}
+a {
+  color: white;
+  text-decoration: none;
 }
 h1 {
   color: var(--hl-font-color);
@@ -86,15 +96,21 @@ h2 {
   margin-top: 8px;
 }
 footer {
-  background-color: var(--highlighting-color);
+  background: linear-gradient(
+    to left,
+    var(--highlighting-color),
+    var(--secondary-hl-color)
+  );
   margin-top: 50px;
   padding: 20px;
 }
-
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1100px) {
   main {
     max-width: 90%;
   }
+}
+
+@media screen and (max-width: 750px) {
   .articles > * {
     min-width: 100%;
   }
